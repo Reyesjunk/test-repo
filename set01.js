@@ -1,5 +1,5 @@
 function whoAmI (name, age) {
-	if(name === undefined || age === undefined) {
+	if(name === undefined || typeof name !== "string" || age === undefined || age !== "number") {
 		console.error("Argument not valid");
 	}
 	else{
