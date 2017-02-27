@@ -94,3 +94,49 @@ function monthDays(month) {
 			break;
 	}
 }
+
+//Rock Paper Scissors
+
+function RockPaperScissors(userChoice){
+    var computer = 1 + Math.floor((Math.random()*3));
+    if(userChoice === 1) {
+    	if (computer === 2){
+    		console.log(`Computer wins`);
+    	}
+    	else if (computer === 3) {
+    		console.log(`User Wins`);
+    	}
+    	else {
+    		console.log(`It's a tie`);
+    	}
+    }
+
+     if(userChoice === 2) {
+    	if (computer === 3){
+    		console.log(`Computer wins`);
+    	}
+    	else if (computer === 1) {
+    		console.log(`User Wins`);
+    	}
+    	else {
+    		console.log(`It's a tie`);
+    	}
+    }
+
+    if(userChoice === 3) {
+    	if (computer === 1){
+    		console.log(`Computer wins`);
+    	}
+    	else if (computer === 2) {
+    		console.log(`User Wins`);
+    	}
+    	else {
+    		console.log(`It's a tie`);
+    	}
+ 
+    }
+
+
+}
+
+RockPaperScissors(2);
