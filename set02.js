@@ -23,3 +23,29 @@ function beyond(num) {
 	}
 	else {}
 }
+
+//Cracking the code
+function code(word){
+	switch (word[0]) {
+		case 'a': 
+			return word[1];
+			break;
+		case 'b':
+			 return word[2];
+			break;
+		case 'c':
+			return word[3];
+			break;
+		case 'd':
+			return word[4];
+			break;
+		default:
+			return " ";
+			break;
+	}
+}
+function crackCode() {
+	console.log(code('craft') + crode('block') + code('argon') + code('meter')+ code('bells')+code('brown')+
+	code('croon') + code('droop'));
+}
+crackCode();
