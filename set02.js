@@ -52,11 +52,8 @@ function code(word){
 			break;
 	}
 }
-function crackCode() {
-	console.log(code('craft') + code('block') + code('argon') + code('meter')+ code('bells')+code('brown')+
+console.log(code('craft') + code('block') + code('argon') + code('meter')+ code('bells')+code('brown')+
 	code('croon') + code('droop'));
-}
-crackCode();
 
 //How many days in a month
 
@@ -112,7 +109,7 @@ function monthDays(month) {
 //Rock Paper Scissors
 
 function RockPaperScissors(userChoice){
-    var computer = 1 + Math.floor((Math.random()*3));
+    let computer = 1 + Math.floor((Math.random()*3));
     const rock = 1;
     const paper = 2;
     const scissor = 3;
@@ -120,39 +117,39 @@ function RockPaperScissors(userChoice){
     const userWin = "User wins";
     const tie = "It's a tie";
 
-    if(userChoice === 1) {
-    	if (computer === 2){
-    		console.log(`Computer wins`);
+    if(userChoice === rock) {
+    	if (computer === paper){
+    		console.log(compWin);
     	}
-    	else if (computer === 3) {
-    		console.log(`User Wins`);
+    	else if (computer === scissor) {
+    		console.log(userWin);
     	}
     	else {
-    		console.log(`It's a tie`);
+    		console.log(tie);
     	}
     }
 
-     if(userChoice === 2) {
-    	if (computer === 3){
-    		console.log(`Computer wins`);
+     if(userChoice === paper) {
+    	if (computer === scissor){
+    		console.log(compWin);
     	}
-    	else if (computer === 1) {
-    		console.log(`User Wins`);
+    	else if (computer === rock) {
+    		console.log(userWin);
     	}
     	else {
-    		console.log(`It's a tie`);
+    		console.log(tie);
     	}
     }
 
-    if(userChoice === 3) {
-    	if (computer === 1){
-    		console.log(`Computer wins`);
+    if(userChoice === scissor) {
+    	if (computer === rock){
+    		console.log(compWin);
     	}
-    	else if (computer === 2) {
-    		console.log(`User Wins`);
+    	else if (computer === paper) {
+    		console.log(userWin);
     	}
     	else {
-    		console.log(`It's a tie`);
+    		console.log(tie);
     	}
  
     }
