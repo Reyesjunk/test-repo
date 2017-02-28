@@ -9,19 +9,27 @@ jediName('Beyonce', 'Knowles');
 
 //To Infinity...
 function beyond(num) {
-	if (num === Infinity || num === -Infinity) {
+    // num !== Infinity && num !== -Infinity
+    function isInfinity(num) {
+    	return num === Infinity || num === -Infinity
+    }
+
+	if (isInfinity(num)) {
 		console.log("And beyond");
 	}
-	else if (num !== Infinity && num !== -Infinity && num > 0) {
+	// else if (num !== Infinity && num !== -Infinity && num > 0) {
+	else if (!isInfinity(num) && num > 0) {
 		console.log("To infinity");
 	}
-	else if (num !== Infinity && num !== -Infinity && num < 0) {
+	else if (!isInfinity(num) && num < 0) {
 		console.log("To negative infinity");
 	}
 	else if (num === 0) {
 		console.log("Staying home")
 	}
 	else {}
+
+	// return undefined
 }
 
 //Cracking the code
@@ -45,7 +53,7 @@ function code(word){
 	}
 }
 function crackCode() {
-	console.log(code('craft') + crode('block') + code('argon') + code('meter')+ code('bells')+code('brown')+
+	console.log(code('craft') + code('block') + code('argon') + code('meter')+ code('bells')+code('brown')+
 	code('croon') + code('droop'));
 }
 crackCode();
@@ -53,9 +61,12 @@ crackCode();
 //How many days in a month
 
 function monthDays(month) {
+	let daysInMonth = 31;
+
 	switch (month) {
 		case "January":
-			return 'January has 31 days';
+		// return `${month} has ___ days`
+			daysInMonth = 31;
 			break;
 		case "February":
 			return 'February has 28 or 29 days';
@@ -93,12 +104,22 @@ function monthDays(month) {
 		default:
 			break;
 	}
+
+	return `${month} has ${daysInMonth} days`;
+
 }
 
 //Rock Paper Scissors
 
 function RockPaperScissors(userChoice){
     var computer = 1 + Math.floor((Math.random()*3));
+    const rock = 1;
+    const paper = 2;
+    const scissor = 3;
+    const compWin = "Computer wins";
+    const userWin = "User wins";
+    const tie = "It's a tie";
+
     if(userChoice === 1) {
     	if (computer === 2){
     		console.log(`Computer wins`);

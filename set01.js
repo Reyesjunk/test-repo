@@ -20,7 +20,7 @@ function yearOfBirth(age) {
 	}
 	catch (e) {
 		console.log(e.message);
-	}
+	}	
 }
 
 whoAmI();
